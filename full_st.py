@@ -3,7 +3,7 @@ import streamlit as st
 
 st.title("Rabbit Email Assitant")
 
-openai.api_key = "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"
+openai.api_key = st.secrets['openai_api_key']
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-4"
